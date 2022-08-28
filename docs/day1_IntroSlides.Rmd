@@ -48,13 +48,13 @@ library(knitr)
 
 ## What the heck is "Data Science"?
 
-Data Science:  [Google search](https://www.google.com/#q=data+science) and [Google Trends](https://trends.google.com/trends/explore?date=all&geo=US&q=data%20science).
+Data Science:  [Google Trends](https://trends.google.com/trends/explore?date=all&geo=US&q=data%20science).
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"data science","geo":"US","time":"2004-01-01 2021-08-27"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=data%20science","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 ## How popular are "Data Science" jobs?
 
-- According to [glassdoor](https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm), "Data Scientist" is the #2 job based on a weighting of salary, satisfaction, and openings 
+- According to [glassdoor](https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm), "Data Scientist" is the #3 job based on a weighting of salary, satisfaction, and openings 
 
 - <img src="img/glassdoor.png" width=1000>
 
@@ -166,7 +166,7 @@ Focus on the "soup to nuts" approach to problem solving
     - **pull** changes made by others to your computer
 
 - What you need to do
-    - read the [GitHub reference page](https://github.com/econ122-f21/github-classroom-for-stduents)
+    - read the [GitHub reference page](https://github.com/econ122-f22/github-classroom-for-stduents)
     
 ## For rest of class
 

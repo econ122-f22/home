@@ -5,13 +5,13 @@ Michael Gelman (<mgelman@cmc.edu>), Claremont McKenna College
 
 Office hours:
 
-- In person: Mo/We 12:25 PM outside RN12 (or come inside and let me know you want to meet)
-- Virtual: Sign up [here](https://calendly.com/michael-gelman) and use [this](https://cmc-its.zoom.us/j/3494522481) zoom link
+- In person: Mo/We 1:00-2:00 PM Bauer 216
+- Virtual: Sign up [here](https://calendly.com/michael-gelman) 
 
 Tutor sessions (BC 22):
 
-- **Mo 06:00-08:00 PM** - 
-- **We 08:00-10:00 PM** - 
+- **Mo 06:00-08:00 PM** - Oleksandr (Alex) Horban 
+- **Tu 08:00-10:00 PM** - William DeForest 
 
 Textbook 1: [Modern Data Science with R](https://mdsr-book.github.io/) (1st edition)  
 Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/book/10.1007/978-1-4614-7138-7)
@@ -25,10 +25,8 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ### Assignments due
 
-- [Test assignment]() (due **09/03**) 
-    - Solutions [.Rmd]() [.md]()
-- [Problem Set 1]() (due **09/13**)
-    - Solutions [.Rmd]() [.md]()
+- [Test assignment](https://classroom.github.com/a/CQuhTy99) (due **09/02**) 
+- [Problem Set 1]() (due **09/12**)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
@@ -36,10 +34,11 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 **Monday** (intro, GitHub, test assignment) 
 
 -   before class:
-    - Try to set up R, RStudio, Git, GitHub account (See [GitHub reference quick guide](https://github.com/econ122-f22/github-classroom-for-stduents) and See [GitHub reference full guide](https://happygitwithr.com/index.html))
+    - Try to set up R, RStudio, Git, GitHub account (See [GitHub reference quick guide](https://github.com/econ122-f22/github-classroom-for-students) and See [GitHub reference full guide](https://happygitwithr.com/index.html))
 -   in class: 
     -   day 1 slides: [.Rmd](docs/day1_IntroSlides.Rmd) [.html](https://econ122-f22.github.io/home/day1_IntroSlides.html)
-    -   [test assignment]()
+    -   continue setting up software
+    -   [test assignment](https://classroom.github.com/a/CQuhTy99)
 
 **Wednesday** (reproducibility, R Markdown)
 
