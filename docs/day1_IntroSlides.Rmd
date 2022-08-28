@@ -61,19 +61,6 @@ Data Science:  [Google Trends](https://trends.google.com/trends/explore?date=all
 
 ## [Data Science via the American Statistical Assocation](https://www.amstat.org/asa/files/pdfs/POL-DataScienceStatement.pdf)
 
-- "While there is not yet a consensus on what precisely constitutes data
-science, three professional communities, all within computer science and/or statistics, are emerging
-as foundational to data science: 
-    + Database Management enables transformation, conglomeration,
-and organization of data resources; 
-    + Statistics and Machine Learning convert data into
-knowledge; and 
-    + Distributed and Parallel Systems provide the computational infrastructure to
-carry out data analysis." 
-
-
-## [Data Science via the American Statistical Assocation](https://www.amstat.org/asa/files/pdfs/POL-DataScienceStatement.pdf)
-
 - Previously, many of the roles were split out
    + Gathering and manging raw data
    + Economic and statistical analysis
@@ -110,7 +97,7 @@ Some warnings to heed
 
 - These days it's almost **TOO EASY** to implement complicated statistical algorithms with one line of code
     + This makes it easy to create fancy graphs and results without really understanding what you are doing
-- One advantage of learning data science in an educational institituion is so you can better understand what is going on under the hood
+- One advantage of learning data science in an educational institution is so you can better understand what is going on under the hood
     + Once we get to the statistical analysis portion, try to make sure you also understand the statistics well
 
 
