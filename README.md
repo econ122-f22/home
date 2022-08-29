@@ -26,7 +26,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 ### Assignments due
 
 - [Test assignment](https://classroom.github.com/a/CQuhTy99) (due **09/02**) 
-- [Problem Set 1]() (due **09/12**)
+- [Problem Set 1](https://classroom.github.com/a/xSowMRmz) (due **09/12**)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
