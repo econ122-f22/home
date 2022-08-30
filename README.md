@@ -11,7 +11,7 @@ Office hours:
 Tutor sessions (BC 22):
 
 - **Mo 06:00-08:00 PM** - Oleksandr (Alex) Horban 
-- **Tu 08:00-10:00 PM** - William DeForest 
+- **Th 08:00-10:00 PM** - William DeForest 
 
 Textbook 1: [Modern Data Science with R](https://mdsr-book.github.io/) (1st edition)  
 Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/book/10.1007/978-1-4614-7138-7)
