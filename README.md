@@ -65,7 +65,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   read Grolemund/Wickham sections [20.2 Vector Basics](http://r4ds.had.co.nz/vectors.html#vector-basics), [20.3 Types of Vectors (focus on logical, numeric)](http://r4ds.had.co.nz/vectors.html#important-types-of-atomic-vector), and [20.5 Lists](http://r4ds.had.co.nz/vectors.html#lists)
     -   Reminder: PS 1 due on Monday
 -   in class: 
-    -   day 3 slides [.Rmd](docs/day3_RObjectsSlides.Rmd) [.html](https://econ122-f21.github.io/home/day3_RObjectsSlides.html)
+    -   day 3 slides [.Rmd](docs/day3_RObjectsSlides.Rmd) [.html](https://econ122-f22.github.io/home/day3_RObjectsSlides.html)
     -   day 3 activity: [.Rmd](activities/day3_RObjectsActivity.Rmd) [.md](activities/day3_RObjectsActivity.md)
         -  solutions: [.Rmd](activities/solutions/day3_RObjectsActivity_Solution.Rmd) [.md](activities/solutions/day3_RObjectsActivity_Solution.md)
 
