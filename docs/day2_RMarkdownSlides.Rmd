@@ -16,7 +16,9 @@ output:
 knitr::opts_chunk$set(collapse=TRUE, prompt=TRUE, eval=TRUE, message=F, include=T,comment=NULL)
 ```
 
-## Quick Comment: Re-compiling Lecture Slides
+## Quick Comment: Cloning the home page and compiling slides
+
+- The recommended way to update course content is by cloning the home repository and pulling all the updates each week
 
 - While click-through slides are useful for presentations, they may not be the best for review
 - You can `Knit` the `.Rmd` file for the slides into a more conveient format
@@ -202,3 +204,8 @@ cat("```{r ChunkName1}
     + doesn't happen overnight
     + using R Markdown is a good start!
     + I don't expect you to use inline code for all your assignments
+
+- For the rest of today
+    + finish up software setup
+    + work on test assignment
+    + work on class activity
