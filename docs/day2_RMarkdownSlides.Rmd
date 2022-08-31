@@ -202,3 +202,8 @@ cat("```{r ChunkName1}
     + doesn't happen overnight
     + using R Markdown is a good start!
     + I don't expect you to use inline code for all your assignments
+
+- For the rest of today
+    + finish up software setup
+    + work on test assignment
+    + work on class activity
