@@ -100,7 +100,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### Week 4 (09/20)
+### Week 4 (09/19)
 
 **Monday** (Introduction to `dplyr`)
 
