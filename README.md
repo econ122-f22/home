@@ -27,6 +27,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 - [Test assignment](https://classroom.github.com/a/CQuhTy99) (due **09/02**) 
 - [Problem Set 1](https://classroom.github.com/a/xSowMRmz) (due **09/12**)
+- [Problem Set 2](https://classroom.github.com/a/HzJQu66N) (due **09/23**)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
@@ -97,4 +98,27 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   day 5 activity: [.Rmd](activities/day5_ggplotActivity_2.Rmd) [.md](activities/day5_ggplotActivity_2.md)
         -  solutions: [.Rmd](activities/solutions/day5_ggplotActivity_2_solution.Rmd) [.md](activities/solutions/day5_ggplotActivity_2_solution.md)
 
+------------------------------------------------------------------------
+
+### Week 4 (09/20)
+
+**Monday** (Introduction to `dplyr`)
+
+-   before class:
+    -   read MDSR sections 4.1 and 4.2
+-   in class: basic data wrangling with `dplyr`
+    -   day 6 slides: [.Rmd](docs/day6_DataWrangling1Slides.Rmd) [.html](https://econ122-f22.github.io/home/day6_DataWrangling1Slides.html)
+    -   day 6 activity: [.Rmd](activities/day6_DataWrangling1Activity.Rmd) [.md](activities/day6_DataWrangling1Activity.md)
+        -  solutions: [.Rmd](activities/solutions/day6_DataWrangling1Activity_Solution.Rmd) [.md](activities/solutions/day6_DataWrangling1Activity_Solution.md)
+        
+
+**Wednesday** (Work on Team Project 1)
+
+-   before class:
+    -   Make sure you have your Team Project 1 partners
+-   in class: 
+    -   Work with partners on Team Project 1
+    -   Ask any questions related to material up to this point
+
+------------------------------------------------------------------------
 
