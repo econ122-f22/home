@@ -41,8 +41,7 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
 library(ggplot2)
 packageVersion("ggplot2")
 ```
-- Note: you can also create plots in `base R`, but we won't cover that
-- `ggplot` has some start up costs but saves time in the long run
+
 
 ## `ggplot2` grammar {.build}
 
@@ -60,7 +59,6 @@ ggplot(data) +    # data
   <theme_funs> # play with axes, colors, etc (optional)
 ```
 - can **layer** geometry functions
-- can plot **stats** from raw data
 
 
 ## `Survey` data {.build}
@@ -189,10 +187,10 @@ ggplot(survey, aes(x=Question.12,y=Question.15)) +
 
 Change symbol color by `major` (Q16): requires `aes` argument!
 
-- the `color` is the `discrete` variable "major", that is why `scale_color_discrete` is used
+
 ```{r, fig.height=3.5}
 ggplot(survey, aes(x=Question.12,y=Question.15)) + 
-  geom_point(aes(color=Question.16), size=3) + scale_color_discrete(name="major")
+  geom_point(aes(color=Question.16), size=3) 
 ```
 
 ## Scatterplot {.build}
@@ -200,12 +198,13 @@ ggplot(survey, aes(x=Question.12,y=Question.15)) +
 Change symbol size by number of tv hours/week (Q14): requires `aes` argument!
 ```{r, fig.height=3.5}
 ggplot(survey, aes(x=Question.12,y=Question.15)) + 
-  geom_point(aes(color=Question.16, size=Question.14)) + scale_color_discrete(name="major")
+  geom_point(aes(color=Question.16, size=Question.14)) 
 ```
 
-## Scatterplot {.build}
-
-The `size` is the `continuous` variable tv, that is why `scale_size_continous` is used
+## Scatterplot (legend labels) {.build}
+- Need to address labels by type of variable
+    - The `color` is the `discrete` variable "major"
+    - The `size` is the `continuous` variable tv
 ```{r, fig.height=3.5}
 ggplot(survey, aes(x=Question.12,y=Question.15)) + 
   geom_point(aes(color=Question.16, size=Question.14)) + scale_color_discrete(name="major") + 
