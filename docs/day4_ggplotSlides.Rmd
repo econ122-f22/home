@@ -24,7 +24,8 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
 
 ## Exploratory data analysis (EDA)
 
-- Oftentimes, real world data is messy
+- Our ultimate goal is a statistical hypothesis test or robust statistical pattern
+  - However, oftentimes, real world data is messy
 - Ex: you come up with a thesis topic and write down all the theory and statistical analysis you want to perform
     - You find a relevant dataset, but should you trust it? 
 - With large datasets, unrealistic to go through and check all the data
