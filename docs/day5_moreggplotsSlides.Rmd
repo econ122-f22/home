@@ -22,16 +22,22 @@ if (length(install.me) >= 1) install.packages(install.me, repos = "http://cran.u
 lapply(mypacks, library, character.only=TRUE)  # load all packages
 ```
 
+## Bar graphs {.build}
+```{r, echo=FALSE}
+survey <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/Survey.csv")
+```
+- So far our main variable of interest has been continuous (GPA)
+- How do we plot data that is categorical?
+- We want to analyze political comfort level (Q9)
+```{r, fig.height=3.5, fig.width=8}
+head(survey$Question.9)
+```
 
 
 ## Bar graphs {.build}
 
-```{r, echo=FALSE}
-survey <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/Survey.csv")
-```
 How does political comfort level (Q9) vary by religious group (Q8)?
 ```{r, fig.height=3.5, fig.width=8}
-levels(survey$Question.8) <- c("not religious","religious, active", "religious, not active")
 ggplot(survey, aes(x=Question.8, fill=Question.9)) + geom_bar(position="fill")
 ```
 
