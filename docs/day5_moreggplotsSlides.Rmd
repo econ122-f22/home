@@ -137,7 +137,7 @@ ggplot(world) +
 
 ## Cloropleth maps using `geom_map` {.build}
 
-- A cloropleth map uses color or shading of subregions to visual data
+- A cloropleth map uses color or shading of subregions to visualize data
 - State level data from the 2016 American Community Survey 
 ```{r}
 ACS <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/ACS2016.csv")
