@@ -151,7 +151,8 @@ str(ACS)
 
 - Want to visualize "% born in state"
 - Don't need to merge data. Can have two separate data files: state data `ACS` + mapping data `MainStates`
-```{r, fig.height=3.0}
+    - But need to make sure the state names in `region` are the **same**
+```{r, fig.height=2.5}
 ggplot() + coord_map() + 
   geom_map(data=ACS, aes(map_id = region, fill = PercentInState), map = MainStates) +
   expand_limits(x=MainStates$long, y=MainStates$lat) + ggtitle("% Born in State")
