@@ -123,3 +123,25 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
+### Week 5 (09/27)
+
+**Monday** (Joins in `dplyr`)
+
+-   before class:
+    -   read MDSR section 4.3 and 4.4
+    -   get started with PS 3
+-   in class:
+    -   day 7 slides: [.Rmd](docs/day7_DataWrangling2Slides.Rmd)  [.html](https://econ122-f22.github.io/home/day7_DataWrangling2Slides.html)
+    -   day 7 activity: [.Rmd](activities/day7_DataWrangling2Activity.Rmd) [.md](activities/day7_DataWrangling2Activity.md)
+          - solutions: [.Rmd](activities/solutions/day7_DataWrangling2Activity_Solution.Rmd) [.md](activities/solutions/day7_DataWrangling2Activity_Solution.md)
+    
+**Wednesday** (Data intake)
+
+-   before class
+    -   read MDSR sections 5.5.3 and 5.5.4 (we'll come back to the other sections after the exam)
+    -   read Grolemund/Wickham [chapter 16](http://r4ds.had.co.nz/dates-and-times.html#introduction-10) - focus on sections 16.2 and 16.3.
+-   in class
+    -   day 8 slides: [.Rmd](docs/day8_DataIntakeSlides.Rmd) [.html](https://econ122-f22.github.io/home/day8_DataIntakeSlides.html)
+    -   day 8/9 activity: [.Rmd](activities/day0809_TidyDataActivity.Rmd) [.md](activities/day0809_TidyDataActivity.md)
+          - solutions: [.Rmd](activities/solutions/day0809_TidyDataActivity_Solution.Rmd) [.md](activities/solutions/day0809_TidyDataActivity_Solution.md)
+          
