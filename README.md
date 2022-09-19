@@ -124,7 +124,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### Week 5 (09/27)
+### Week 5 (09/26)
 
 **Monday** (Joins in `dplyr`)
 
