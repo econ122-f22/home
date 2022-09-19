@@ -21,7 +21,7 @@ campus that are considered academic or administrative buildings.
 administrative?
 
 ``` r
-> AAbuildings <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/AcadAdminBuildings.csv")
+> AAbuildings <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/AcadAdminBuildings.csv",stringsAsFactors=TRUE)
 > glimpse(AAbuildings)
 > AAbuildings <- read_csv("https://raw.githubusercontent.com/mgelman/data/master/AcadAdminBuildings.csv")
 > glimpse(AAbuildings)
@@ -39,8 +39,9 @@ meter installed.
 of `read.csv`? - e.g. look at Musser, Timestamp
 
 ``` r
-> energy1 <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv")
+> energy1 <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv",stringsAsFactors=TRUE)
 > glimpse(energy1)
+> local_edition(1)
 > energy2 <- read_csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv")
 > glimpse(energy2)
 ```

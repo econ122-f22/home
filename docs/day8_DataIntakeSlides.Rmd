@@ -21,6 +21,7 @@ packs <- installed.packages()   # find installed package list
 install.me <- mypacks[!(mypacks %in% packs[,"Package"])]  #what needs to be installed?
 if (length(install.me) >= 1) install.packages(install.me, repos = "http://cran.us.r-project.org")   # install (if needed)
 lapply(mypacks, library, character.only=TRUE)  # load all packages
+local_edition(1)
 ```
 
 ## Data intake
@@ -80,8 +81,9 @@ as.vector(y)  # plain vector
 
 - the base R `read.csv` default setting makes all columns with characters a factor:
     + default: `stringsAsFactors=TRUE`
+    +  Fixed in the most recent version but can still cause issues with older versions
 ```{r e1}
-energy1 <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv")
+energy1 <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv",stringsAsFactors=TRUE)
 glimpse(energy1[,c("Timestamp","Musser_Hall")])
 ```
 - BAD: Default reads `Timestamp` is a factor 
@@ -92,7 +94,9 @@ glimpse(energy1[,c("Timestamp","Musser_Hall")])
 
 - the `readr` package `read_csv` default setting makes all columns with characters a character:
 - Default: it uses the first 1000 rows to guess variable types (`guess_max`)
+    - Fixed in the most recent version but can still cause issues with older versions
 ```{r e2, warning=FALSE}
+local_edition(1)
 energy2 <- read_csv("https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv")
 glimpse(energy2[,c("Timestamp","Musser_Hall")])
 ```
@@ -145,6 +149,7 @@ parse_logical(as.character(energy1$Musser_Hall[22242]))
 ## `read_csv` vs. `read.csv`:  {.build}
 
 - Solution: 
+    + make sure you have the latest version
     + check for warnings, define column types if needed
     + or increase `guess_max` value
 

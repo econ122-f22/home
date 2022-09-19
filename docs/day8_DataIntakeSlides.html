@@ -192,7 +192,7 @@ slide:not(.current) .plotly.html-widget{
 </ul></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Factor vs String:</h2></hgroup><article  class="build" id="factor-vs-string">
+</article></slide><slide class=""><hgroup><h2>Factor vs String:</h2></hgroup><article  id="factor-vs-string" class="build">
 
 <ul class = 'build'>
 <li>Recall: factors (coded internally as integer levels) take less storage than strings</li>
@@ -200,7 +200,7 @@ slide:not(.current) .plotly.html-widget{
 <li>What happens when we coerce into a numeric variable?</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>String into numeric:</h2></hgroup><article  class="build" id="string-into-numeric">
+</article></slide><slide class=""><hgroup><h2>String into numeric:</h2></hgroup><article  id="string-into-numeric" class="build">
 
 <ul class = 'build'>
 <li>Character string variable</li>
@@ -225,7 +225,7 @@ Warning: NAs introduced by coercion
 <li>Coercion correctly converts to numeric vector with NA for non-numeric</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Factor into numeric:</h2></hgroup><article  class="build" id="factor-into-numeric">
+</article></slide><slide class=""><hgroup><h2>Factor into numeric:</h2></hgroup><article  id="factor-into-numeric" class="build">
 
 <ul class = 'build'>
 <li>Factor variable</li>
@@ -250,7 +250,7 @@ Levels: 2.1 4 9 oops
 <li>Coercion is incorrect: returns integer level value, not variable values</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Factor into numeric:</h2></hgroup><article  class="build" id="factor-into-numeric-1">
+</article></slide><slide class=""><hgroup><h2>Factor into numeric:</h2></hgroup><article  id="factor-into-numeric-1" class="build">
 
 <ul class = 'build'>
 <li>Can get correct coercion with <code>readr::parse_number</code></li>
@@ -269,21 +269,22 @@ row col expected actual
 <li>Coercion is now correct</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv" class="build">
 
 <ul class = 'build'>
 <li>the base R <code>read.csv</code> default setting makes all columns with characters a factor:
 
 <ul class = 'build'>
 <li>default: <code>stringsAsFactors=TRUE</code></li>
+<li>Fixed in the most recent version but can still cause issues with older versions</li>
 </ul></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; energy1 &lt;- read.csv(&quot;https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv&quot;)
+<pre class = 'prettyprint lang-r'>&gt; energy1 &lt;- read.csv(&quot;https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv&quot;,stringsAsFactors=TRUE)
 &gt; glimpse(energy1[,c(&quot;Timestamp&quot;,&quot;Musser_Hall&quot;)])
 Rows: 35,129
 Columns: 2
-$ Timestamp   &lt;chr&gt; &quot;2015-09-01 00:00:00&quot;, &quot;2015-09-01 00:15:00&quot;, &quot;2015-09-01 ~
+$ Timestamp   &lt;fct&gt; 2015-09-01 00:00:00, 2015-09-01 00:15:00, 2015-09-01 00:30~
 $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~</pre>
 
 <ul class = 'build'>
@@ -295,26 +296,31 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
 <li>GOOD: Musser Hall energy values are <code>dbl</code> (double)</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-1">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-1" class="build">
 
 <ul class = 'build'>
 <li>the <code>readr</code> package <code>read_csv</code> default setting makes all columns with characters a character:</li>
-<li>Default: it uses the first 1000 rows to guess variable types (<code>guess_max</code>)</li>
+<li>Default: it uses the first 1000 rows to guess variable types (<code>guess_max</code>)
+
+<ul class = 'build'>
+<li>Fixed in the most recent version but can still cause issues with older versions</li>
+</ul></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; energy2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv&quot;)
+<pre class = 'prettyprint lang-r'>&gt; local_edition(1)
+&gt; energy2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/mgelman/data/master/EnergyData1516.csv&quot;)
 &gt; glimpse(energy2[,c(&quot;Timestamp&quot;,&quot;Musser_Hall&quot;)])
 Rows: 35,129
 Columns: 2
 $ Timestamp   &lt;dttm&gt; 2015-09-01 00:00:00, 2015-09-01 00:15:00, 2015-09-01 00:3~
-$ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~</pre>
+$ Musser_Hall &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~</pre>
 
 <ul class = 'build'>
 <li>GOOD: Default reads <code>Timestamp</code> is a date/time type called <code>POSIXct</code></li>
 <li>BAD: Musser Hall energy values are <code>logical</code></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-2">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-2" class="build">
 
 <ul class = 'build'>
 <li>Summaries for <code>energy1</code> and <code>energy2</code> are not the same!</li>
@@ -324,8 +330,8 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
    83.3   262.4   288.0   305.5   328.0 84953.2   22669 
 &gt; summary(energy2$Musser_Hall)
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-   83.3   262.4   288.0   305.5   328.0 84953.2   22669 </pre>
+   Mode    NA&#39;s 
+logical   35129 </pre>
 
 <ul class = 'build'>
 <li>The first 22,243 rows in <code>energy1</code> are NA before they become numerical</li>
@@ -334,18 +340,29 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
 <pre class = 'prettyprint lang-r'>&gt; energy1[22238:22245,&quot;Musser_Hall&quot;]
 [1]    NA    NA    NA    NA 420.9 398.0 370.2 327.4</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-3">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-3" class="build">
 
 <ul class = 'build'>
 <li>If <code>read_csv</code> guesses column type wrong you get a warning message:</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>&gt; problems(energy2)
-# A tibble: 0 x 5
-# ... with 5 variables: row &lt;int&gt;, col &lt;int&gt;, expected &lt;chr&gt;, actual &lt;chr&gt;,
-#   file &lt;chr&gt;</pre>
+# A tibble: 12,460 x 5
+     row col         expected           actual file                             
+   &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;              &lt;chr&gt;  &lt;chr&gt;                            
+ 1 22242 Musser_Hall 1/0/T/F/TRUE/FALSE 420.9  &#39;https://raw.githubusercontent.c~
+ 2 22243 Musser_Hall 1/0/T/F/TRUE/FALSE 398    &#39;https://raw.githubusercontent.c~
+ 3 22244 Musser_Hall 1/0/T/F/TRUE/FALSE 370.2  &#39;https://raw.githubusercontent.c~
+ 4 22245 Musser_Hall 1/0/T/F/TRUE/FALSE 327.4  &#39;https://raw.githubusercontent.c~
+ 5 22246 Musser_Hall 1/0/T/F/TRUE/FALSE 322.6  &#39;https://raw.githubusercontent.c~
+ 6 22247 Musser_Hall 1/0/T/F/TRUE/FALSE 357.4  &#39;https://raw.githubusercontent.c~
+ 7 22248 Musser_Hall 1/0/T/F/TRUE/FALSE 378.3  &#39;https://raw.githubusercontent.c~
+ 8 22249 Musser_Hall 1/0/T/F/TRUE/FALSE 379.8  &#39;https://raw.githubusercontent.c~
+ 9 22250 Musser_Hall 1/0/T/F/TRUE/FALSE 367.6  &#39;https://raw.githubusercontent.c~
+10 22251 Musser_Hall 1/0/T/F/TRUE/FALSE 355.3  &#39;https://raw.githubusercontent.c~
+# ... with 12,450 more rows</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-4">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-4" class="build">
 
 <ul class = 'build'>
 <li>What happened in row 22,242?</li>
@@ -360,9 +377,9 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
 </ul>
 
 <pre class = 'prettyprint lang-r'>&gt; energy2$Musser_Hall[22242]
-[1] 420.9</pre>
+[1] NA</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-5">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-5" class="build">
 
 <ul class = 'build'>
 <li><code>read_csv</code> guesses data type for each column
@@ -386,18 +403,19 @@ attr(,&quot;problems&quot;)
   &lt;int&gt; &lt;int&gt; &lt;chr&gt;              &lt;chr&gt; 
 1     1    NA 1/0/T/F/TRUE/FALSE 420.9 </pre>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-6">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-6" class="build">
 
 <ul class = 'build'>
 <li>Solution:
 
 <ul class = 'build'>
+<li>make sure you have the latest version</li>
 <li>check for warnings, define column types if needed</li>
 <li>or increase <code>guess_max</code> value</li>
 </ul></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-7">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-7" class="build">
 
 <ul class = 'build'>
 <li>We can also explicitly specify what storage type we want</li>
@@ -412,7 +430,7 @@ attr(,&quot;problems&quot;)
 +                           dayWeek = col_factor(
 +                               levels=c(&quot;Mon&quot;,&quot;Tues&quot;,&quot;Wed&quot;,&quot;Thurs&quot;,&quot;Fri&quot;,&quot;Sat&quot;,&quot;Sun&quot;))))</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  class="build" id="read_csv-vs.-read.csv-8">
+</article></slide><slide class=""><hgroup><h2><code>read_csv</code> vs. <code>read.csv</code>:</h2></hgroup><article  id="read_csv-vs.-read.csv-8" class="build">
 
 <ul class = 'build'>
 <li>No warning messages in <code>problems</code></li>
@@ -432,7 +450,7 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
 <pre class = 'prettyprint lang-r'>&gt; energy$Musser_Hall[22242]
 [1] 420.9</pre>
 
-</article></slide><slide class=""><hgroup><h2>Dates and Times:</h2></hgroup><article  class="build" id="dates-and-times">
+</article></slide><slide class=""><hgroup><h2>Dates and Times:</h2></hgroup><article  id="dates-and-times" class="build">
 
 <ul class = 'build'>
 <li>R has built-in functions to handle dates and times</li>
@@ -445,7 +463,7 @@ $ Musser_Hall &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
 <li>The <code>lubridate</code> package makes dates and times manipulations a little easier</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: extract info</h2></hgroup><article  class="build" id="lubridate-extract-info">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: extract info</h2></hgroup><article  id="lubridate-extract-info" class="build">
 
 <ul class = 'build'>
 <li>Let’s look at the 5th <code>Timestamp</code> in the energy data:</li>
@@ -466,7 +484,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 &gt; yday(stamp5)
 [1] 244</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: extract info</h2></hgroup><article  class="build" id="lubridate-extract-info-1">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: extract info</h2></hgroup><article  id="lubridate-extract-info-1" class="build">
 
 <ul class = 'build'>
 <li>We can also extract date and time info:</li>
@@ -485,7 +503,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 &gt; minute(stamp5)
 [1] 0</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: create dates and times</h2></hgroup><article  class="build" id="lubridate-create-dates-and-times">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: create dates and times</h2></hgroup><article  id="lubridate-create-dates-and-times" class="build">
 
 <ul class = 'build'>
 <li>There are many variations of commands like:</li>
@@ -503,7 +521,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 <li>time part: h=hour, m=minute, s=second</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: create dates and times</h2></hgroup><article  class="build" id="lubridate-create-dates-and-times-1">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: create dates and times</h2></hgroup><article  id="lubridate-create-dates-and-times-1" class="build">
 
 <ul class = 'build'>
 <li>Also <code>make_date</code> or <code>make_datetime</code></li>
@@ -526,7 +544,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 10 2015-09-01 02:15:00 2015-09-01 02:15:00  2015     9          1        2
 # ... with 35,119 more rows, and 1 more variable: timeMinute &lt;dbl&gt;</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: updating dates and times</h2></hgroup><article  class="build" id="lubridate-updating-dates-and-times">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: updating dates and times</h2></hgroup><article  id="lubridate-updating-dates-and-times" class="build">
 
 <ul class = 'build'>
 <li>Can modify an existing date with <code>update</code></li>
@@ -539,7 +557,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 &gt; update(mydate, hour=12, minute = 23)
 [1] &quot;2018-01-24 12:23:00 UTC&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  class="build" id="lubridate-measuring-time">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  id="lubridate-measuring-time" class="build">
 
 <ul class = 'build'>
 <li>Suppose we want to see how much time has elapsed since the start of the term:</li>
@@ -556,9 +574,9 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 <pre class = 'prettyprint lang-r'>&gt; today()
 [1] &quot;2022-09-19&quot;
 &gt; now()
-[1] &quot;2022-09-19 12:47:18 PDT&quot;</pre>
+[1] &quot;2022-09-19 14:13:54 PDT&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  class="build" id="lubridate-measuring-time-1">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  id="lubridate-measuring-time-1" class="build">
 
 <ul class = 'build'>
 <li><code>interval</code> creates an &ldquo;interval&rdquo; class object that defines an interval of time (tied to specific dates)</li>
@@ -578,7 +596,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 &gt; ddays(1)
 [1] &quot;86400s (~1 days)&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  class="build" id="lubridate-measuring-time-2">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  id="lubridate-measuring-time-2" class="build">
 
 <ul class = 'build'>
 <li>We use an interval and duration to compute a length of time</li>
@@ -597,7 +615,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
 &gt; interval(firstDay, today()) / dminutes(1)
 [1] 554400</pre>
 
-</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  class="build" id="lubridate-measuring-time-3">
+</article></slide><slide class=""><hgroup><h2><code>lubridate</code>: measuring time</h2></hgroup><article  id="lubridate-measuring-time-3" class="build">
 
 <ul class = 'build'>
 <li>Can also use date/time variables:</li>
