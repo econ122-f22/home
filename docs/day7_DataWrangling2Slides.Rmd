@@ -132,3 +132,14 @@ anti_join(class_grades,GPA,by = c("student_ID"="CMC_ID"))
 - Tells me which students don't have a GPA match (BC they are not CMC students)
 - Sometimes identifying which records don't match is the goal itself 
     - For example, may tell you which years, states, students are missing so you can request that data
+    
+## More examples {.build}
+
+- So far: One unique ID where each ID only shows up once in the table
+- Other scenarios
+    - What if we have a table that has multiple observations per unique ID? 
+        + multiple classes per student
+    - What happens if we want to merge on multiple variables? 
+        + merge on student ID and semester
+- The activity today introduces the above two scenarios
+    
