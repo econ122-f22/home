@@ -22,7 +22,6 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   Additional free resource: [R for Data Science](http://r4ds.had.co.nz/)
 
 ------------------------------------------------------------------------
-
 ### Assignments due
 
 - [Test assignment](https://classroom.github.com/a/CQuhTy99) (due **09/02**) 
@@ -32,6 +31,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
   - Solutions [.Rmd](PS/PS2-solution.Rmd) [.md](PS/PS2-solution.md)
 - [Team Project 1](https://classroom.github.com/a/EtptlYnq) (due **09/27**)
 - [Problem Set 3](https://classroom.github.com/a/0uDT9Ba8) (due **10/04**)
+- [Problem Set 4](https://classroom.github.com/a/Uzal8iu4) (due **10/10**)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
