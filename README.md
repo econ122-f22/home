@@ -27,7 +27,9 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 - [Test assignment](https://classroom.github.com/a/CQuhTy99) (due **09/02**) 
 - [Problem Set 1](https://classroom.github.com/a/xSowMRmz) (due **09/12**)
+  - Solutions [.Rmd](PS/PS1-solution.Rmd) [.md](PS/PS1-solution.md)
 - [Problem Set 2](https://classroom.github.com/a/HzJQu66N) (due **09/23**)
+  - Solutions [.Rmd](PS/PS2-solution.Rmd) [.md](PS/PS2-solution.md)
 - [Team Project 1](https://classroom.github.com/a/EtptlYnq) (due **09/27**)
 - [Problem Set 3](https://classroom.github.com/a/0uDT9Ba8) (due **10/04**)
 ------------------------------------------------------------------------
