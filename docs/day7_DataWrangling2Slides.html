@@ -3262,15 +3262,13 @@ slide:not(.current) .plotly.html-widget{
 <pre class = 'prettyprint lang-r'>&gt; class_grades &lt;- data.frame(student_ID=1:5,
 +                            grade=c(&quot;A&quot;,&quot;A+&quot;,&quot;B-&quot;,&quot;B+&quot;,&quot;A-&quot;),
 +                            college=c(&quot;PIT&quot;,&quot;CMC&quot;,&quot;CMC&quot;,&quot;CMC&quot;,&quot;SRC&quot;))
-&gt; class_grades %&gt;% as_tibble()
-# A tibble: 5 × 3
+&gt; class_grades 
   student_ID grade college
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  
-1          1 A     PIT    
-2          2 A+    CMC    
-3          3 B-    CMC    
-4          4 B+    CMC    
-5          5 A-    SRC    </pre>
+1          1     A     PIT
+2          2    A+     CMC
+3          3    B-     CMC
+4          4    B+     CMC
+5          5    A-     SRC</pre>
 
 </article></slide><slide class=""><hgroup><h2>Example: class grades</h2></hgroup><article  id="example-class-grades-1" class="build">
 
@@ -3279,15 +3277,13 @@ slide:not(.current) .plotly.html-widget{
 </ul>
 
 <pre class = 'prettyprint lang-r'>&gt; GPA &lt;- data.frame(CMC_ID=c(2:4,10:11),gpa=c(2.7,4.0,3.1,3.6,3.7))
-&gt; GPA %&gt;% as_tibble()
-# A tibble: 5 × 2
-  CMC_ID   gpa
-   &lt;int&gt; &lt;dbl&gt;
-1      2   2.7
-2      3   4  
-3      4   3.1
-4     10   3.6
-5     11   3.7</pre>
+&gt; GPA 
+  CMC_ID gpa
+1      2 2.7
+2      3 4.0
+3      4 3.1
+4     10 3.6
+5     11 3.7</pre>
 
 </article></slide><slide class=""><hgroup><h2>Example: class grades</h2></hgroup><article  id="example-class-grades-2" class="build">
 
@@ -3304,13 +3300,11 @@ slide:not(.current) .plotly.html-widget{
 </ul></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; inner_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 3 × 4
-  student_ID grade college   gpa
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
-1          2 A+    CMC       2.7
-2          3 B-    CMC       4  
-3          4 B+    CMC       3.1</pre>
+<pre class = 'prettyprint lang-r'>&gt; inner_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) 
+  student_ID grade college gpa
+1          2    A+     CMC 2.7
+2          3    B-     CMC 4.0
+3          4    B+     CMC 3.1</pre>
 
 <ul class = 'build'>
 <li>What are the downsides to this inner join?
@@ -3327,15 +3321,13 @@ slide:not(.current) .plotly.html-widget{
 <li>Let’s try a <code>left_join</code> to keep all students</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; left_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 5 × 4
-  student_ID grade college   gpa
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
-1          1 A     PIT      NA  
-2          2 A+    CMC       2.7
-3          3 B-    CMC       4  
-4          4 B+    CMC       3.1
-5          5 A-    SRC      NA  </pre>
+<pre class = 'prettyprint lang-r'>&gt; left_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) 
+  student_ID grade college gpa
+1          1     A     PIT  NA
+2          2    A+     CMC 2.7
+3          3    B-     CMC 4.0
+4          4    B+     CMC 3.1
+5          5    A-     SRC  NA</pre>
 
 <ul class = 'build'>
 <li>Left join will never <strong>remove</strong> information from the left dataframe
@@ -3352,15 +3344,13 @@ slide:not(.current) .plotly.html-widget{
 <li>What will a <code>right_join</code> give us?</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; right_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 5 × 4
-  student_ID grade college   gpa
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
-1          2 A+    CMC       2.7
-2          3 B-    CMC       4  
-3          4 B+    CMC       3.1
-4         10 &lt;NA&gt;  &lt;NA&gt;      3.6
-5         11 &lt;NA&gt;  &lt;NA&gt;      3.7</pre>
+<pre class = 'prettyprint lang-r'>&gt; right_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) 
+  student_ID grade college gpa
+1          2    A+     CMC 2.7
+2          3    B-     CMC 4.0
+3          4    B+     CMC 3.1
+4         10  &lt;NA&gt;    &lt;NA&gt; 3.6
+5         11  &lt;NA&gt;    &lt;NA&gt; 3.7</pre>
 
 <ul class = 'build'>
 <li>All the students that I have GPA information for, even if they are not in my class</li>
@@ -3372,35 +3362,44 @@ slide:not(.current) .plotly.html-widget{
 <li>What does <code>full_join</code> do?</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; full_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 7 × 4
-  student_ID grade college   gpa
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
-1          1 A     PIT      NA  
-2          2 A+    CMC       2.7
-3          3 B-    CMC       4  
-4          4 B+    CMC       3.1
-5          5 A-    SRC      NA  
-6         10 &lt;NA&gt;  &lt;NA&gt;      3.6
-7         11 &lt;NA&gt;  &lt;NA&gt;      3.7</pre>
+<pre class = 'prettyprint lang-r'>&gt; full_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) 
+  student_ID grade college gpa
+1          1     A     PIT  NA
+2          2    A+     CMC 2.7
+3          3    B-     CMC 4.0
+4          4    B+     CMC 3.1
+5          5    A-     SRC  NA
+6         10  &lt;NA&gt;    &lt;NA&gt; 3.6
+7         11  &lt;NA&gt;    &lt;NA&gt; 3.7</pre>
 
 <ul class = 'build'>
 <li>All possible information</li>
+<li>Dangerous if you have two very large tables</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Example: class grades</h2></hgroup><article  id="example-class-grades-6" class="build">
 
 <ul class = 'build'>
-<li>What if I just want to know which rows have a match?</li>
+<li>What if I just want to know which rows have a match?
+
+<ul class = 'build'>
+<li>Ex: my college variable got deleted</li>
+</ul></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; semi_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 3 × 3
-  student_ID grade college
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  
-1          2 A+    CMC    
-2          3 B-    CMC    
-3          4 B+    CMC    </pre>
+<pre class = 'prettyprint lang-r'>&gt; class_grades %&gt;% select(-college) 
+  student_ID grade
+1          1     A
+2          2    A+
+3          3    B-
+4          4    B+
+5          5    A-</pre>
+
+<pre class = 'prettyprint lang-r'>&gt; class_grades %&gt;% select(-college) %&gt;% semi_join(GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;))
+  student_ID grade
+1          2    A+
+2          3    B-
+3          4    B+</pre>
 
 <ul class = 'build'>
 <li>Only keeps variables from the left table (no <code>GPA</code>)</li>
@@ -3417,12 +3416,10 @@ slide:not(.current) .plotly.html-widget{
 <li>What if I just want to know which rows <strong>don’t</strong> match</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>&gt; anti_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) %&gt;% as_tibble()
-# A tibble: 2 × 3
+<pre class = 'prettyprint lang-r'>&gt; anti_join(class_grades,GPA,by = c(&quot;student_ID&quot;=&quot;CMC_ID&quot;)) 
   student_ID grade college
-       &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  
-1          1 A     PIT    
-2          5 A-    SRC    </pre>
+1          1     A     PIT
+2          5    A-     SRC</pre>
 
 <ul class = 'build'>
 <li>Tells me which students don’t have a GPA match (BC they are not CMC students)</li>
