@@ -56,7 +56,7 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
 class_grades <- data.frame(student_ID=1:5,
                            grade=c("A","A+","B-","B+","A-"),
                            college=c("PIT","CMC","CMC","CMC","SRC"))
-class_grades %>% as.tbl
+class_grades %>% as_tibble()
 ```
 
 ## Example: class grades {.build}
@@ -65,7 +65,7 @@ class_grades %>% as.tbl
 
 ```{r}
 GPA <- data.frame(CMC_ID=c(2:4,10:11),gpa=c(2.7,4.0,3.1,3.6,3.7))
-GPA %>% as.tbl
+GPA %>% as_tibble()
 ```
 
 ## Example: class grades {.build}
@@ -76,7 +76,7 @@ GPA %>% as.tbl
     - The keys have different variable names but that's OK
 
 ```{r}
-inner_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+inner_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - What are the downsides to this inner join?  
     - I don't see my PIT and SRC students anymore
@@ -86,7 +86,7 @@ inner_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
 
 - Let's try a `left_join` to keep all students
 ```{r}
-left_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+left_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - Left join will never **remove** information from the left dataframe
     - Perhaps the fact that there **isn't** a match is important
@@ -96,7 +96,7 @@ left_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
 
 - What will a `right_join` give us?
 ```{r}
-right_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+right_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - All the students that I have GPA information for, even if they are not in my class
 
@@ -104,7 +104,7 @@ right_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
 
 - What does `full_join` do?
 ```{r}
-full_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+full_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - All possible information
 
@@ -112,7 +112,7 @@ full_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
 ## Example: class grades {.build}
 - What if I just want to know which rows have a match?
 ```{r}
-semi_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+semi_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - Only keeps variables from the left table (no `GPA`)
 - Only returns rows which have a match
@@ -122,7 +122,7 @@ semi_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
 
 - What if I just want to know which rows **don't** match
 ```{r}
-anti_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as.tbl
+anti_join(class_grades,GPA,by = c("student_ID"="CMC_ID")) %>% as_tibble()
 ```
 - Tells me which students don't have a GPA match (BC they are not CMC students)
 - Sometimes identifying which records don't match is the goal itself 
