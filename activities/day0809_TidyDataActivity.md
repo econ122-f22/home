@@ -18,7 +18,7 @@ campus that are considered academic or administrative buildings.
 `readr::read_csv`). How do they read in the data differently?
 
 **2.** How many buildings on campus are classified as academic or
-administrative?
+administrative (how many rows are there)?
 
 ``` r
 > AAbuildings <- read.csv("https://raw.githubusercontent.com/mgelman/data/master/AcadAdminBuildings.csv",stringsAsFactors=TRUE)
