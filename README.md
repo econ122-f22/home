@@ -172,3 +172,21 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   day 10 activity: [.Rmd](activities/day10_stringsActivity.Rmd) [.md](activities/day10_stringsActivity.md)
         - solutions: [.Rmd](activities/solutions/day10_stringsActivity_Solution.Rmd) [.html](https://econ122-f22.github.io/home/day10_stringsActivity_Solution.html)
         
+------------------------------------------------------------------------
+
+### Week 7 (10/10)
+        
+**Monday** (Iteration)
+-   before class:
+    -   read MDSR section 5.4
+-   in class:
+    -   day 11 slides: [.Rmd](docs/day11_IterationsSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day11_IterationsSlides.html)
+    -   day 11 activity: [.Rmd](activities/day11_IterationActivity.Rmd) [.md](activities/day11_IterationActivity.md)
+        - solutions: [.Rmd](activities/solutions/day11_IterationActivity_Solution.Rmd) [.md](activities/solutions/day11_IterationActivity_Solution.md)
+
+**Wednesday**
+-   before class:
+    -   study for exam 1
+-   in class:
+    -   take exam 1
+
