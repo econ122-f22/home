@@ -125,29 +125,6 @@ problems(energy2)
 
 ## `read_csv` vs. `read.csv`:  {.build}
 
-- What happened in row 22,242?
-- Value from `read.csv`:
-```{r}
-energy1$Musser_Hall[22242]
-```
-- Value from `read_csv`:
-```{r}
-energy2$Musser_Hall[22242]
-```
-
-## `read_csv` vs. `read.csv`:  {.build}
-
-- `read_csv` guesses data type for each column
-    - then uses `parse` functions to coerce the entire column
-    - `parse` failures result in an `NA` entry
-```{r}
-energy1$Musser_Hall[22242]
-parse_logical(as.character(energy1$Musser_Hall[22242]))
-```
-
-  
-## `read_csv` vs. `read.csv`:  {.build}
-
 - Solution: 
     + make sure you have the latest version
     + check for warnings, define column types if needed
@@ -166,18 +143,7 @@ energy <- read_csv("https://raw.githubusercontent.com/mgelman/data/master/Energy
                           dayWeek = col_factor(
                               levels=c("Mon","Tues","Wed","Thurs","Fri","Sat","Sun"))))
 ```
-
-## `read_csv` vs. `read.csv`:  {.build}
-
-- No warning messages in `problems`
-- Check again:
-```{r}
-glimpse(energy[,c("Timestamp","Musser_Hall")])
-```
-- Row 22,242 is correct:
-```{r}
-energy$Musser_Hall[22242]
-```
+- No more warning messages after reading
 
 ## Dates and Times:  {.build}
 
@@ -244,7 +210,7 @@ update(mydate, hour=12, minute = 23)
 
 - Suppose we want to see how much time has elapsed since the start of the term:
 ```{r}
-firstDay<- mdy("08/30/2021")
+firstDay<- mdy("08/29/2022")
 firstDay
 ```
 - We can get a date/time with `now()` and a date with `today()`
