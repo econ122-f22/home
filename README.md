@@ -146,7 +146,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   in class
     -   day 8 slides: [.Rmd](docs/day8_DataIntakeSlides.Rmd) [.html](https://econ122-f22.github.io/home/day8_DataIntakeSlides.html)
     -   day 8/9 activity: [.Rmd](activities/day0809_TidyDataActivity.Rmd) [.md](activities/day0809_TidyDataActivity.md)
-          - solutions: [.Rmd](activities/solutions/day0809_TidyDataActivity_Solution.Rmd) [.md](activities/solutions/day0809_TidyDataActivity_Solution.md)
+          - solutions: [.Rmd](activities/solutions/day08_TidyDataActivity_Solution.Rmd) [.md](activities/solutions/day0809_TidyDataActivity_Solution.md)
 
 ------------------------------------------------------------------------
 
