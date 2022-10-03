@@ -159,6 +159,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   in class:
     -   day 9 slides: [.Rmd](docs/day9_TidyDataSlides.Rmd) [.html](https://econ122-f22.github.io/home/day9_TidyDataSlides.html)
     -   continue day 8/9 activity
+          - solutions: [.Rmd](activities/solutions/day0809_TidyDataActivity_Solution.Rmd) [.md](activities/solutions/day0809_TidyDataActivity_Solution.md)
 
 **Wednesday** (Strings and regular expressions)
 
