@@ -512,7 +512,13 @@ to plot the average energy usage in Oct. of 2015 by day of the week
 
 -   note: if you use `geom_line` you will need to add `group=1` to your
     `aes` to get a line graph when plotting against the categorical
-    variable `dayWeek`
+    variable `dayWeek`. This is because when we use a `factor` variable
+    `aes` will set the group to each factor. `geom_line` will then try
+    to connect the dots **WITHIN** each group which is just connecting
+    to itself. To fix this, we set `group=1` to tell `ggplot` that all
+    the observations are part of the same `group` and so to connect the
+    line across days of the week. We could also use `group=99`, the main
+    idea is that we set all the observations to the **SAME** group.
 
 **2.** How could you add more buildings to your plot? How easy or hard
 would this be with the data in the current (wide) format?
