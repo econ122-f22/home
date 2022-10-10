@@ -217,7 +217,6 @@ qdf %>% filter(building %in% c("Sayles-Hill" ,"Language_&_Dining_Center", "Olin_
     - e.g. get quantiles by month? or day of the week?
     - `qfun` needed to `filter` by `building`
 - the `do` command in `dplyr` lets you apply a function to the groups of a data frame:
-    - the function isn't written to apply to one type of grouping variable
 - Idea:
     - write a function `FUN` for a (hypothetical) subsetted version of the data
     - `FUN` must return a data frame or objects in a list 
