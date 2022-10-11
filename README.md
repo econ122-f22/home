@@ -34,6 +34,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 - [Problem Set 3](https://classroom.github.com/a/0uDT9Ba8) (due **10/04**)
   - Solutions [.Rmd](PS/PS3-solution.Rmd) [.md](PS/PS3-solution.md)
 - [Problem Set 4](https://classroom.github.com/a/Uzal8iu4) (due **10/10**)
+  - Solutions [.Rmd](PS/PS4-solution.Rmd) [.md](PS/PS4-solution.md)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
