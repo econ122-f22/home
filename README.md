@@ -206,3 +206,30 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
   - No class!!
       - Professor going to Belgium for a conference at the [National Bank of Belgium](https://www.nbb.be/en/publications-and-research/research-cooperation/research-conferences/international-biennial-research). Let me know if you have any requests
+      
+------------------------------------------------------------------------
+
+### Week 9 (10/24)
+
+**Monday** (Statistical Learning)
+
+-   before class:
+    -   read [ISLR](https://link.springer.com/book/10.1007/978-1-4614-7138-7) section 2.1-2.2, 3.1
+-   in class:
+    -   day 12 slides: [.Rmd](docs/day12_StatLearning.Rmd)  [.html](https://econ122-f22.github.io/home/day12_StatLearning.html)
+    -   day 12 activity: [.Rmd](activities/day12_StatLearningActivity.Rmd) [.md](activities/day12_StatLearningActivity.md)
+        - solutions: [.Rmd](activities/solutions/day12_StatLearningActivity_Solution.Rmd) [.md](activities/solutions/day12_StatLearningActivity_Solution.md)
+
+
+**Wednesday** (Intro to Classifiers)
+
+-   before class:  
+    -  Read ISLR section 4.1-4.2
+    -  Read [this](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) article explaining what a confusion matrix is
+    -  Read [this](https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124) helpful article on evaluating classification models
+-   in class:
+    -   day 13 slides: [.Rmd](docs/day13_IntroClassifiers.Rmd)  [.html](https://econ122-f22.github.io/home/day13_IntroClassifiers.html)
+    -   day 13 activity: [.Rmd](activities/day13_IntroClassifiersActivity.Rmd) [.md](activities/day13_IntroClassifiersActivity.md)
+         - solutions: [.Rmd](activities/solutions/day13_IntroClassifiersActivity_Solution.Rmd) [.md](activities/solutions/day13_IntroClassifiersActivity_Solution.md)
+
+        
