@@ -21,6 +21,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   [GitHub reference full guide ](https://happygitwithr.com/index.html)
 -   Additional free resource: [R for Data Science](http://r4ds.had.co.nz/)
 
+[This week](#currentweek)
 ------------------------------------------------------------------------
 ### Assignments due
 
@@ -209,7 +210,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
       
 ------------------------------------------------------------------------
 
-### Week 9 (10/24)
+### <a name="currentweek"></a>Week 9 (10/24)
 
 **Monday** (Statistical Learning)
 
