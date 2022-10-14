@@ -193,7 +193,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   before class:
     -   study for exam 1
 -   in class:
-    -   take exam 1
+    -   take [exam 1](MT1_scores.md)
 
 ------------------------------------------------------------------------
 
