@@ -258,3 +258,27 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   day 15 activity: [.Rmd](activities/day15_CrossValidationActivity.Rmd) [.md](activities/day15_CrossValidationActivity.md)
         - solutions: [.Rmd](activities/solutions/day15_CrossValidationActivity_Solution.Rmd) [.md](activities/solutions/day15_CrossValidationActivity_Solution.md)
         
+------------------------------------------------------------------------
+
+### Week 11 (11/07)
+
+**Monday** (Decision Trees)
+
+-   before class:
+    - Read MDSR section 8.2.1-8.2.3 (11.1.1)
+    - Read ISLR section 8.1
+-   in class:
+    -   quick note on [TeamProject2](projects/TeamProject2.md)
+    -   day 16 slides: [.Rmd](docs/day16_DecisionTreeSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day16_DecisionTreeSlides.html)
+    -   day 16 activity: [.Rmd](activities/day16_DecisionTreeActivity.Rmd) [.md](activities/day16_DecisionTreeActivity.md)
+        - solutions: [.Rmd](activities/solutions/day16_DecisionTreeActivity_Solution.Rmd) [.md](activities/solutions/day16_DecisionTreeActivity_Solution.md)
+        
+**Wednesday** (Other classifiers)
+
+-   before class:
+    - Read MDSR section 8.2.4-8.2.5 (11.1.2-11.1.3)
+    - Read ISLR section 2.2.3 (`k-nn`), 8.2.1-8.2.2 (`bagging\random forest`)
+-   in class:
+    -   day 17 slides: [.Rmd](docs/day17_OtherClassifiersSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day17_OtherClassifiersSlides.html)
+    -   day 17 activity: [.Rmd](activities/day17_OtherClassifiersActivity.Rmd) [.md](activities/day17_OtherClassifiersActivity.md)
+        - solutions: [.Rmd](activities/solutions/day17_OtherClassifiersActivity_Solution.Rmd) [.md](activities/solutions/day17_OtherClassifiersActivity_Solution.md)
