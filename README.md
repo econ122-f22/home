@@ -206,7 +206,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 **Wednesday** 
 
   - No class!!
-      - Professor going to Belgium for a conference at the [National Bank of Belgium](https://www.nbb.be/en/publications-and-research/research-cooperation/research-conferences/international-biennial-research). Let me know if you have any requests
+      - Professor going to Belgium for a conference at the [National Bank of Belgium](https://www.nbb.be/en/publications-and-research/research-cooperation/research-conferences/international-biennial-research). Let me know if you have any requests [pics](https://photos.app.goo.gl/VpZN5ecnxJAkHudh8)
       
 ------------------------------------------------------------------------
 
