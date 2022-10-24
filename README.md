@@ -233,4 +233,28 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   day 13 activity: [.Rmd](activities/day13_IntroClassifiersActivity.Rmd) [.md](activities/day13_IntroClassifiersActivity.md)
          - solutions: [.Rmd](activities/solutions/day13_IntroClassifiersActivity_Solution.Rmd) [.md](activities/solutions/day13_IntroClassifiersActivity_Solution.md)
 
+------------------------------------------------------------------------
+
+### Week 10 (10/31)       
+
+**Monday** (Logistic regression)
+
+-   before class:
+    -   Read ISLR section 4.3
+    -   Read MDSR section 8.4.4 on ROC curves
+-   in class:
+    -   day 14 slides: [.Rmd](docs/day14_LogisticRegressionSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day14_LogisticRegressionSlides.html)
+    -   day 14 activity: [.Rmd](activities/day14_LogisticRegressionActivity.Rmd) [.md](activities/day14_LogisticRegressionActivity.md)
+         - solutions: [.Rmd](activities/solutions/day14_LogisticRegressionActivity_Solution.Rmd) [.md](activities/solutions/day14_LogisticRegressionActivity_Solution.md)
+
+**Wednesday** (Cross Validation)
+
+-   before class:
+    - Read ISLR section 5.1
+    - Read MDSR section 8.4.1 (10.3.2)
+    - Read [this blog](https://www.r-bloggers.com/whats-the-difference-between-machine-learning-statistics-and-data-mining/) on statistical learning vs. machine learning
+-   in class:
+    -   day 15 slides: [.Rmd](docs/day15_CrossValidationSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day15_CrossValidationSlides.html)
+    -   day 15 activity: [.Rmd](activities/day15_CrossValidationActivity.Rmd) [.md](activities/day15_CrossValidationActivity.md)
+        - solutions: [.Rmd](activities/solutions/day15_CrossValidationActivity_Solution.Rmd) [.md](activities/solutions/day15_CrossValidationActivity_Solution.md)
         
