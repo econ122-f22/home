@@ -35,7 +35,7 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
     - Will I get into graduate school?
 
 - This is called a **classification model**
-  - **Binary Response variable:** we classify (i.e. predict) each case as a default ("success") or not ("failure")
+  - **Binary Response variable:** we classify (i.e. predict) each case as a "success" (1) or "failure" (0)
 
 ## Examples of classification
 - Medicine: Use DNA sequence data to determine who will get a disease (or not)
