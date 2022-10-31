@@ -339,3 +339,13 @@ ggplot(perf_df, aes(x=fpr, y=tpr, color=threshold)) +  geom_line(size=2) +
 <img src="img/ROC.png" width=700>
 
 </center>
+
+## Summary  {.build}
+
+- Defined a logistic model
+- Estimated a logistic model
+- Discussed the impacts of changing the threshold
+- Introduced two more evaluation metrics
+  - Double density plot
+  - ROC curve
+- Today's activity: estimating a model with more variables
