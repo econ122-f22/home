@@ -271,7 +271,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     - Read MDSR section 8.2.1-8.2.3 (11.1.1)
     - Read ISLR section 8.1
 -   in class:
-    -   quick note on [TeamProject2](projects/TeamProject2.md)
+    -   quick note on [TeamProject2](https://github.com/econ122-f22/teamproject2)
     -   day 16 slides: [.Rmd](docs/day16_DecisionTreeSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day16_DecisionTreeSlides.html)
     -   day 16 activity: [.Rmd](activities/day16_DecisionTreeActivity.Rmd) [.md](activities/day16_DecisionTreeActivity.md)
         - solutions: [.Rmd](activities/solutions/day16_DecisionTreeActivity_Solution.Rmd) [.md](activities/solutions/day16_DecisionTreeActivity_Solution.md)
