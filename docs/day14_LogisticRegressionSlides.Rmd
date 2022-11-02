@@ -57,7 +57,6 @@ $$
 - The left-hand side is called the **log-odds** (logit) of success. The **odds** of success is just the ratio of the probability of success and failure
 - Holding all other predictors constant, 
     + a one-unit increase in $X_1$ is associated with a $\beta_1$ unit change (additive) in the log-odds of success.
-    + a one-unit increase in $X_1$ is associated with a $e^{\beta_1}$-fold change (multiplicative)  in the odds of success
 - While effects may be hard to compute, the sign is always easy to interpret
 
 ## Visualizing a logistic regression model {.build}
@@ -213,18 +212,18 @@ ggplot(loans, aes(x=Duration.in.month,y=log(Credit.amount), color=Default)) +
   geom_abline(intercept=-.7/.140, slope=.0433/.14, color="black")
 ```
 
-## Loans example  {.build}
+<!-- ## Loans example  {.build} -->
 
-- Code for previous plot. We know that log-odds are:
-$$ \log\left( \dfrac{\pi(X)}{1-\pi(X)} \right) = \beta_0 + \beta_1 X_1 + ... + \beta_p X_p $$
-- Fill in values for $\pi(X), \beta,$ and $X$. Solve for credit amount to get boundry between default/no default prediction
-$$\log\left(\dfrac{0.5}{1-0.5}\right) = 0 =  -0.700-0.140ln(Credit) + 0.0433Duration $$
-```{r, eval=FALSE}
-ggplot(loans, aes(x=Duration.in.month,y=log(Credit.amount), color=Default)) + 
-  geom_point(aes(shape=prediction1)) +
-  ggtitle("Duration vs. Credit by default type \nLogistic Classifier") + 
-  geom_abline(intercept=-.7/.140, slope=.0433/.14, color="black")
-```
+<!-- - Code for previous plot. We know that log-odds are: -->
+<!-- $$ \log\left( \dfrac{\pi(X)}{1-\pi(X)} \right) = \beta_0 + \beta_1 X_1 + ... + \beta_p X_p $$ -->
+<!-- - Fill in values for $\pi(X), \beta,$ and $X$. Solve for credit amount to get boundry between default/no default prediction -->
+<!-- $$\log\left(\dfrac{0.5}{1-0.5}\right) = 0 =  -0.700-0.140ln(Credit) + 0.0433Duration $$ -->
+<!-- ```{r, eval=FALSE} -->
+<!-- ggplot(loans, aes(x=Duration.in.month,y=log(Credit.amount), color=Default)) +  -->
+<!--   geom_point(aes(shape=prediction1)) + -->
+<!--   ggtitle("Duration vs. Credit by default type \nLogistic Classifier") +  -->
+<!--   geom_abline(intercept=-.7/.140, slope=.0433/.14, color="black") -->
+<!-- ``` -->
 
 
 ## Loans example  {.build}
@@ -288,19 +287,23 @@ str(loans$Default)
 - Need to tell it the ordering or else it will think "NoDefault" is "positive"
 
 
-## ROC curve   {.build}
+<!-- ## ROC curve   {.build} -->
 
 
-```{r}
-preds_obj <- prediction(loans$probs1, loans$Default, label.ordering=c("NoDefault","Default"))
-perf_obj <- performance(preds_obj, "tpr","fpr")
-str(perf_obj)
-```
-- The objects produced by `ROCR` are "S4" class of objects
-    - access elements with `@` symbol (instead of `$`)
+<!-- ```{r} -->
+<!-- preds_obj <- prediction(loans$probs1, loans$Default, label.ordering=c("NoDefault","Default")) -->
+<!-- perf_obj <- performance(preds_obj, "tpr","fpr") -->
+<!-- str(perf_obj) -->
+<!-- ``` -->
+<!-- - The objects produced by `ROCR` are "S4" class of objects -->
+<!--     - access elements with `@` symbol (instead of `$`) -->
 
 ## Loan defaults: `ROC` curve  {.build}
 - Can plot ROC curve directly from performance object:
+```{r,echo=FALSE}
+preds_obj <- prediction(loans$probs1, loans$Default, label.ordering=c("NoDefault","Default"))
+perf_obj <- performance(preds_obj, "tpr","fpr")
+```
 ```{r}
 plot(perf_obj)
 ```
