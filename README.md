@@ -38,6 +38,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
   - Solutions [.Rmd](PS/PS4-solution.Rmd) [.md](PS/PS4-solution.md)
 - [Problem Set 5](https://classroom.github.com/a/kBOV9IWn) (due **11/10**)
   - Solutions [.Rmd](PS/PS5-solution.Rmd) [.md](PS/PS5-solution.md)
+- [Team Project 2](https://classroom.github.com/a/ysMmeyS3) (due **11/20**) [[Description]](https://github.com/econ122-f22/teamproject2)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
@@ -284,3 +285,49 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     -   day 17 slides: [.Rmd](docs/day17_OtherClassifiersSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day17_OtherClassifiersSlides.html)
     -   day 17 activity: [.Rmd](activities/day17_OtherClassifiersActivity.Rmd) [.md](activities/day17_OtherClassifiersActivity.md)
         - solutions: [.Rmd](activities/solutions/day17_OtherClassifiersActivity_Solution.Rmd) [.md](activities/solutions/day17_OtherClassifiersActivity_Solution.md)
+
+------------------------------------------------------------------------
+
+### Week 12 (11/14)
+
+**Monday** (k-means clustering)
+
+-   before class:
+    - Read ISLR section 10.3-10.3.1
+    - Read MDSR section 9.1,9.1.2 (12.1,12.1.2)
+-   in class:
+    -   day 18 slides: [.Rmd](docs/day18_KmeansClusteringSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day18_KmeansClusteringSlides.html)
+    -   day 18 activity: [.Rmd](activities/day18_KmeansClusteringActivity.Rmd) [.md](activities/day18_KmeansClusteringActivity.md)
+        - solutions: [.Rmd](activities/solutions/day18_KmeansClusteringActivity_Solution.Rmd) [.md](activities/solutions/day18_KmeansClusteringActivity_Solution.md)
+
+
+**Wednesday** (Hierarchical clustering)
+
+-   before class:
+    - Read ISLR section 10.3.2 
+    - Read MDSR section 9.1.1 (12.1.1)
+-   in class:
+    -   day 19 slides: [.Rmd](docs/day19_HierarchicalClusteringSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day19_HierarchicalClusteringSlides.html)
+    -   day 19 activity: [.Rmd](activities/day19_HierarchicalClusteringActivity.Rmd) [.md](activities/day19_HierarchicalClusteringActivity.md)
+        - solutions: [.Rmd](activities/solutions/day19_HierarchicalClusteringActivity_Solution.Rmd) [.md](activities/solutions/day19_HierarchicalClusteringActivity_Solution.md)
+
+------------------------------------------------------------------------
+
+### Week 13 (11/21)
+
+**Monday** (Networks Intro)
+
+-   before class:
+    - Read MDSR section 16.1-16.2 (20.1,20.2)
+-   in class:
+    -   [Final project proposal](projects/FinalProject.md)
+    -   [exam 2 explanation](exam2.md)
+    -   day 20 slides: [.Rmd](docs/day20_NetworkGraphsSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day20_NetworkGraphsSlides.html)
+    -   day 20 activity: [.Rmd](activities/day20_NetworkGraphsActivity.Rmd) [.md](activities/day20_NetworkGraphsActivity.md)
+         - solutions: [.Rmd](activities/solutions/day20_NetworkGraphsActivity_Solution.Rmd) [.md](activities/solutions/day20_NetworkGraphsActivity_Solution.md)
+
+**Wednesday** (Thanksgiving!)
+
+-  Prepare Thanksgiving meal
+-  Eat Thanksgiving meal
+-  Sleep
