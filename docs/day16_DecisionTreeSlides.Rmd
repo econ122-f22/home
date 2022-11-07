@@ -74,26 +74,14 @@ conf_mat
 sum(diag(conf_mat))/sum(conf_mat)
 ```
 - logistic regression: 70.9%
-- what is accuracy if we randomly assign "no defaults" vs "default"?
-
 
 ## Loans example {.build}
-
 
 - A tree view of this model:
 - Think of it like 20 questions (each node corresponds with a region)
 ```{r, echo=FALSE}
 plot(as.party(loans_rpart))
 ```
-
-## Decision trees {.build}
-
-- How do we find the *best* partition (tree) of the data to make a decision tree?
-- Typical algorithm is **recursive binary partitioning**
-    + **top down**: starts at the top node of the tree with all of the data cases, successively splits the data (binary splits at each node)
-    + **greedy**: picks the *best* split at the current node, doesn't look ahead to determine which current split would produce a better tree in a future step
-    + **results**: get a "locally" optimum tree, rather than a globally optimum tree
-
 
 ## Decision trees {.build}
 
@@ -174,7 +162,7 @@ loans %>% mutate(predictions = predict(loans_rpart, type="class")) %>%
 
 ## Loans example: More flexible model {.build}
 
-- Earlier I restricted the treee depth to 2
+- Earlier I restricted the tree depth to 2
 - Now, relax that restriction
 ```{r}
 loans_rpart <- rpart(Default ~ Credit.amount + Duration.in.month, 
