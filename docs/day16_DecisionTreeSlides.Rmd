@@ -216,7 +216,7 @@ plot(as.party(loans_rpart),gp = gpar(fontsize = 9))
 
 - If boundaries are linear (first row), then linear methods outperform
 - If boundaries are non-linear (second row), tree methods will do well
-- Ex: Predict meat consumption by income (by country)
+- Ex: Predict meat consumption by income (across the whole world)
     - In some parts of Asia, higher income associated with eating more meat
     - In the U.S. higher income associated with eating less meat
     - Easy to capture this with decision tree, but harder with linear methods
@@ -231,7 +231,7 @@ plot(as.party(loans_rpart),gp = gpar(fontsize = 9))
     - What is the maximum depth of the tree?
     - What is the minimum observations in each leaf
 - Biggest criticism is overfitting: they might look great on a training set but perform poorly on a test set
-- Solution: use cross-validation methods
+- Solution: use cross-validation or other methods (next class)
 
 
 
