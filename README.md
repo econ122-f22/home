@@ -238,7 +238,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### <a name="currentweek"></a>Week 10 (10/31)       
+### Week 10 (10/31)       
 
 **Monday** (Logistic regression)
 
@@ -263,7 +263,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
         
 ------------------------------------------------------------------------
 
-### Week 11 (11/07)
+### <a name="currentweek"></a>Week 11 (11/07)
 
 **Monday** (Decision Trees)
 
