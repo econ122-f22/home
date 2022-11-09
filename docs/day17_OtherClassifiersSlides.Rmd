@@ -354,46 +354,6 @@ loans %>% select(Credit.amount, Duration.in.month, Credit.amount.stan, Duration.
 
 ## Loans k-nn example {.build}
 
-```{r, include=FALSE}
-set.seed(7)
-n <- nrow(loans)
-train_index <- sample(1:n, size=round(.8*n))
-trainX <- loans %>% slice(train_index) %>% select(Duration.in.month.stan, Credit.amount.stan)
-testX <- loans %>% slice(-train_index) %>% select(Duration.in.month.stan, Credit.amount.stan) %>% slice(1:5)
-testX
-loans_knn <- knn(trainX, testX, cl= loans$Default[train_index], k=10)
-loans_knn
-```
-
-- We standardize the data so that our variables are of similar magnitudes 
-- Let's look at an example test case that was classified using k-nn as `r loans_knn[2]`
-
-```{r, echo=FALSE}
-set.seed(1234)
-ggplot(loans[train_index,], aes(x=Duration.in.month.stan, y=Credit.amount.stan)) + 
-  geom_jitter(aes( color=Default)) + 
-  geom_point(data=testX[2,], aes(x=Duration.in.month.stan, y=Credit.amount.stan), shape="X",size=5) + 
-  ggtitle("training set + one test set value (NoDefault prediction)")  
-```
-
-
-## Loans k-nn example {.build}
-
-- Let's zoom in on this case and find a radius that includes the 10 nearest points
-- Looks like 10 "nearest" neighbors: 6 No Default is the majority!
-```{r, echo=FALSE}
-set.seed(1)
-dist <- 0.45
-ggplot(loans[train_index,], aes(x=Duration.in.month.stan, y=Credit.amount.stan)) + 
-  geom_jitter(aes( color=Default),size=3) + 
-  geom_point(data=testX[2,], aes(x=Duration.in.month.stan, y=Credit.amount.stan), shape="X",size=4) + 
-  ggtitle("training set + one test set value (NoDefault prediction)")  + 
-  coord_cartesian(xlim=c(1.75,2.75),ylim=c(-0.25,1)) + 
-  annotate(geom="path",  x= testX$Duration.in.month.stan[2]+ dist*cos(seq(0,2*pi,length.out=100)), y= testX$Credit.amount.stan[2]+dist*sin(seq(0,2*pi,length.out=100)),size=1) 
-```
-
-## Loans k-nn example {.build}
-
 - The scaled version has better recall
 ```{r, echo=FALSE}
 k <- 1:20
