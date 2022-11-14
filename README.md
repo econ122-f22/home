@@ -265,7 +265,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
         
 ------------------------------------------------------------------------
 
-### <a name="currentweek"></a>Week 11 (11/07)
+### Week 11 (11/07)
 
 **Monday** (Decision Trees)
 
@@ -290,7 +290,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### Week 12 (11/14)
+### <a name="currentweek"></a>Week 12 (11/14)
 
 **Monday** (k-means clustering)
 
