@@ -51,49 +51,10 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
     
 ## Simple example: {.build}
 - here are $9$ data points with `two` variables
-- Which points are most similar/dissimilar? 
+- How do we create a `dendogram` from these points?
 ```{r, echo=FALSE}
 df <- data_frame(id=1:9,x1=c(2.5,4,1,1.4,6,2,6.3,5,3.5),x2=c(2,2.2,3,1,3,1.5,3.2,3.1,5))
 ggplot(df,aes(x1,x2)) + geom_point() + geom_text(aes(label=id),nudge_y = -0.15) + coord_fixed()
-```
-
-## Simple example: {.build}
-- Here is the dendrogram for these cases: which cases are most similar?
-```{r, echo=FALSE}
-ex_hc <- hclust(dist(df[,2:3]))
-plot(ex_hc, labels=df$id)
-```
-
-## Simple example: {.build}
-- cut at 0.5 fuses 5 and 7, they are most similar (or least dissimilar!)
-```{r, echo=FALSE}
-ex_hc <- hclust(dist(df[,2:3]))
-plot(ex_hc, labels=df$id)
-abline(h=.5, lty=2)
-```
-
-## Simple example: {.build}
-- cut at 1.5 fuses 5, 7 and 8 and 1,4 and 6. 
-```{r, echo=FALSE}
-ex_hc <- hclust(dist(df[,2:3]))
-plot(ex_hc, labels=df$id)
-abline(h=1.5, lty=2)
-```
-
-## Simple example: {.build}
-- Based on dendrogram: Is 9 more similar to 2 or to 5?
-```{r, echo=FALSE}
-ex_hc <- hclust(dist(df[,2:3]))
-plot(ex_hc, labels=df$id)
-```
-
-## Simple example: {.build}
-- Can't tell: 9 is fused with both 2 and 5 at the *same* height (dissimilarity)
-- Can tell: 9 is more similar to 2,5 than it is to 1 (fuse with 1 is higher than fuse with 2,5)
-```{r, echo=FALSE}
-ex_hc <- hclust(dist(df[,2:3]))
-plot(ex_hc, labels=df$id)
-abline(h=3.5, lty=2)
 ```
 
 ## Algorithm {.build}
@@ -168,6 +129,39 @@ ggplot(df,aes(x1,x2)) + geom_point() + geom_text(aes(label=id),nudge_y = -0.15) 
 ex_hc <- hclust(dist(df[,2:3]))
 plot(ex_hc, labels=df$id)
 ```
+
+## Simple example: {.build}
+- cut at 0.5 fuses 5 and 7, they are most similar (or least dissimilar!)
+```{r, echo=FALSE}
+ex_hc <- hclust(dist(df[,2:3]))
+plot(ex_hc, labels=df$id)
+abline(h=.5, lty=2)
+```
+
+## Simple example: {.build}
+- cut at 1.5 fuses 5, 7 and 8 and 1,4 and 6. 
+```{r, echo=FALSE}
+ex_hc <- hclust(dist(df[,2:3]))
+plot(ex_hc, labels=df$id)
+abline(h=1.5, lty=2)
+```
+
+## Simple example: {.build}
+- Based on dendrogram: Is 9 more similar to 2 or to 5?
+```{r, echo=FALSE}
+ex_hc <- hclust(dist(df[,2:3]))
+plot(ex_hc, labels=df$id)
+```
+
+## Simple example: {.build}
+- Can't tell: 9 is fused with both 2 and 5 at the *same* height (dissimilarity)
+- Can tell: 9 is more similar to 2,5 than it is to 1 (fuse with 1 is higher than fuse with 2,5)
+```{r, echo=FALSE}
+ex_hc <- hclust(dist(df[,2:3]))
+plot(ex_hc, labels=df$id)
+abline(h=3.5, lty=2)
+```
+
 
 ## Hierarchical clustering in R {.build}
 
