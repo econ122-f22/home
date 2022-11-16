@@ -41,6 +41,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 - [Team Project 2](https://classroom.github.com/a/ysMmeyS3) (due **11/20**) [[Description]](https://github.com/econ122-f22/teamproject2)
 - [Problem Set 6](https://classroom.github.com/a/gqKnLSOE) (due **11/28**)
   - Solutions [.Rmd](PS/PS6-solution.Rmd) [.md](PS/PS6-solution.md)
+- [Final Project](https://classroom.github.com/a/ER5Ug4pi) (due **12/16**) [[Description]](FinalProject.md)
 ------------------------------------------------------------------------
 
 ### Week 1 (08/29)
@@ -322,7 +323,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 -   before class:
     - Read MDSR section 16.1-16.2 (20.1,20.2)
 -   in class:
-    -   [Final project proposal](projects/FinalProject.md)
+    -   [Final project proposal](FinalProject.md)
     -   [exam 2 explanation](exam2.md)
     -   day 20 slides: [.Rmd](docs/day20_NetworkGraphsSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day20_NetworkGraphsSlides.html)
     -   day 20 activity: [.Rmd](activities/day20_NetworkGraphsActivity.Rmd) [.md](activities/day20_NetworkGraphsActivity.md)
