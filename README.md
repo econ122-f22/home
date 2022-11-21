@@ -291,7 +291,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### <a name="currentweek"></a>Week 12 (11/14)
+### Week 12 (11/14)
 
 **Monday** (k-means clustering)
 
@@ -316,7 +316,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### Week 13 (11/21)
+### <a name="currentweek"></a>Week 13 (11/21)
 
 **Monday** (Networks Intro)
 
