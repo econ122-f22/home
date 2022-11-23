@@ -39,7 +39,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 - [Problem Set 5](https://classroom.github.com/a/kBOV9IWn) (due **11/10**)
   - Solutions [.Rmd](PS/PS5-solution.Rmd) [.md](PS/PS5-solution.md)
 - [Team Project 2](https://classroom.github.com/a/ysMmeyS3) (due **11/20**) [[Description]](https://github.com/econ122-f22/teamproject2)
-- [Problem Set 6](https://classroom.github.com/a/gqKnLSOE) (due **11/28**)
+- [Problem Set 6](https://classroom.github.com/a/gqKnLSOE) (due **11/29**)
   - Solutions [.Rmd](PS/PS6-solution.Rmd) [.md](PS/PS6-solution.md)
 - [Final Project](https://classroom.github.com/a/ER5Ug4pi) (due **12/16**) [[Description]](FinalProject.md)
 ------------------------------------------------------------------------
