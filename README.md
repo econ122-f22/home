@@ -316,7 +316,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### <a name="currentweek"></a>Week 13 (11/21)
+### Week 13 (11/21)
 
 **Monday** (Networks Intro)
 
@@ -337,14 +337,15 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### Week 14 (11/28)
+### <a name="currentweek"></a>Week 14 (11/28)
 
 **Monday** (Networks Statistics)
 
 -   before class:
     -   Finish up `PS6`
 -   in class:
-    -   [Team Project 2 results](projects/results.csv )
+    -   [Team Project 2 results](projects/results.csv)
+          - [2021 results](projects/results_2021.csv)
     -   Discuss `Final Project` proposals
     -   day 21 slides: [.Rmd](docs/day21_NetworkStatsSlides.Rmd)  [.html](https://econ122-f22.github.io/home/day21_NetworkStatsSlides.html)
     -   day 21 activity: [.Rmd](activities/day21_NetworkStatsActivity.Rmd) [.md](activities/day21_NetworkStatsActivity.md)
