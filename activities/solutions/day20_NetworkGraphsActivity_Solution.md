@@ -12,7 +12,7 @@ countries given in the data.
 ``` r
 > MigrationFlows <- read_csv("https://raw.githubusercontent.com/mgelman/data/master/MigrationFlows.csv")
 > MigrationFlows
-# A tibble: 107,184 × 8
+# A tibble: 107,184 x 8
    sex   destcode origincode  Y1960  Y1970  Y1980  Y1990  Y2000
    <chr> <chr>    <chr>       <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
  1 Male  FRA      AFG          1471     29     55     91    923
@@ -25,7 +25,7 @@ countries given in the data.
  8 Male  FRA      BEN           233   5736   4409    397    166
  9 Male  FRA      ALB         15967     17      4   3586  10017
 10 Male  FRA      ASM             0      0      0      0      0
-# … with 107,174 more rows
+# ... with 107,174 more rows
 ```
 
 #### Question 1
@@ -44,7 +44,7 @@ migration count variables.
 +   filter(sex == "Female", Y2000>1000) %>% 
 +   select(origincode, destcode, Y2000) 
 > MigrationFlowsF
-# A tibble: 1,437 × 3
+# A tibble: 1,437 x 3
    origincode destcode  Y2000
    <chr>      <chr>     <dbl>
  1 DZA        FRA      201387
@@ -57,7 +57,7 @@ migration count variables.
  8 BRB        FRA        1486
  9 BEL        FRA       15164
 10 BIH        FRA       10555
-# … with 1,427 more rows
+# ... with 1,427 more rows
 ```
 
 There are 1,437 cases in this dataset.
