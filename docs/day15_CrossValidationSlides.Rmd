@@ -264,7 +264,6 @@ ggplot(filter(errors,type=="test")) +
     - Remember to `set.seed(n)` before your command or else you will get a different answer each time. Why? 
 - LOOCV:
     - approximately unbiased estimates of the true error
-    - higher variance since the $err_i$ are highly (positively) correlated since their training datasets are almost identical 
     - Don't need to `set seed`. Why?
 
 - The authors of `ISLR` claim that empirical evidence suggest using k-fold cv with $k=5$ or $k=10$.
