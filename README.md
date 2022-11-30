@@ -337,7 +337,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
 
 ------------------------------------------------------------------------
 
-### <a name="currentweek"></a>Week 14 (11/28)
+### Week 14 (11/28)
 
 **Monday** (Networks Statistics)
 
@@ -360,7 +360,7 @@ Textbook 2: [An Introduction to Statistical Learning](https://link.springer.com/
     
 ------------------------------------------------------------------------  
 
-### Week 15 (12/05)
+### <a name="currentweek"></a>Week 15 (12/05)
 
 **Monday** (Networks Activity)
 
