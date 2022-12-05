@@ -55,6 +55,9 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
     
 ## Eigenvector centrality {.build}
 
+- Degree centrality tells us how many "friends" we have
+      - Sometimes it's important to factor in how "important" these friends are
+      - Being friends with influential politicians and financiers can elevate social status
 - Weighted degree centrality with a feedback loop
 - A vertex gets a boost for being connected to **important vertices**
 $$
