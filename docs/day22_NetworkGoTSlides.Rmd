@@ -56,14 +56,17 @@ lapply(mypacks, library, character.only=TRUE)  # load all packages
 ## Eigenvector centrality {.build}
 
 - Degree centrality tells us how many "friends" we have
-      - Sometimes it's important to factor in how "important" these friends are
-      - Being friends with influential politicians and financiers can elevate social status
+    - Sometimes it's important to factor in how "important" these friends are
+    - Being friends with a lot of social, political, financial influence can matter
 - Weighted degree centrality with a feedback loop
 - A vertex gets a boost for being connected to **important vertices**
 $$
 x_i=\sum_{j \in V} w_{ji}x_j
 $$
 - This leads to a linear system which can be solved by linear algebra to backout the $x_i$ values
+$$
+Ax_i=\lambda x_i
+$$
 
 ## PageRank centrality {.build}
 
